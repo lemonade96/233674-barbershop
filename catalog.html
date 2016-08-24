@@ -1,196 +1,197 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Каталог</title>
-  </head>
-  <body>
-    <header class="main-header">
-      <div class="container">
-        <nav class="main-navigation">
-          <ul>
+  <!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet"> 
+      <title>Каталог</title>
+    </head>
+    <body>
+    <header class="main-header clearfix">
+     <div class="container">
+       <nav class="main-nav clearfix">
+          <ul class="clearfix">
             <li>
               <a href="index.html">Информация</a>
             </li>
             <li>
-              <a href="#">Новости</a>
+              <a href="#">Фото и видео</a>
             </li>
             <li>
-              <a href="#">Прайс-лист</a>
+                <a class="index-logo" href="index.html"><img class="index-logo" src="img/for-all/header-logo.png" alt="логотип" width="138" height="70"></a>
             </li>
             <li>
-              <a class="active" href="catalog-item.html">Магазин</a>
+              <a href="#">Карта штата</a>
             </li>
-            <li>
-              <a href="#">Контакты</a>
+             <li>
+              <a class="active">Гостиницы</a>
             </li>
           </ul>
         </nav>
-        <div class="user-block">
-          <a class="login" href="#">Вход</a>
-        </div>
-      </div>
+     </div>
     </header>
-    	<main class="container">
-      		<div class="catalog-header">
-        		<h2>Средства для ухода</h2>
-        			<ul class="breadcrumbs">
-  						<li><a href="#">Главная</a></li>
-  						<li><a href="#">Магазин</a></li>
-  						<li class="active"><a href="#">Средства для ухода</a></li>
-					</ul>
-      		</div>
 
-      		<div class="catalog-filter">
-       			<h3>Производители</h3>
-        		<form action="#" method="get">
-        	  		<input type="checkbox" id="baxter" name="baxter-of-california"><label for="baxter">Baxter of california</label> 
-        	  		<input type="checkbox" id="mr-natty" name="mr-natty" ><label for="mr-natty">Mr Natty</label> 
-        	  		<input type="checkbox" id="suavecito" name="suavecito" ><label for="suavecito">Suavecito </label>
-        	 		<input type="checkbox" id="m+g" name="malim+goetz" ><label for="m+g">Malim+Goetz</label> 
-        	  		<input type="checkbox" id="murrays" name="murrays" ><label for="murrays">Murray's</label> 
-        	 		<input type="checkbox" id="american" name="american-crew" ><label for="american">American Crew </label>
-        
-       		 	<h3>Группы товаров:</h3>
-			  		<input type="radio" id="shave" name="group-of-items" value="shave"><label for="shave">Бритвенные пренадлежности</label>
-			  		<input type="radio" id="stuff" name="group-of-items" value="stuff"><label for="stuff">Средства для ухода</label>
-			  		<input type="radio" id="accessories" name="group-of-items" value="accessories"><label for="accessories">Аксессуары</label>
-			  		<input class="btn" type="button" name="show" value="Показать">
-				</form>
-      		</div>
+      <main class="container catalog-main">
+        <section class="hotel-filter clearfix">
+           <form class="catalog-form clearfix" action="#" method="post">
+            <section class="features-check">
+              <span>Инфраструктура:</span> 
+                <input class="checkbox" id="pool" type="checkbox" name="pool"  checked><label for="pool">Бассейн</label>
+                <input class="checkbox" id="parking" type="checkbox" name="parking"><label class="check-blocked" for="parking">Парковка</label>
+                <input class="checkbox" id="wifi" type="checkbox" name="wifi"><label class="check-blocked" for="wifi">Wi-Fi</label>
+            </section>
+            <section class="features-check">
+              <span>Тип жилья:</span>
+                <input class="checkbox" id="hotel"  type="checkbox" name="hotel" checked><label for="hotel">Гостиница</label>
+                <input class="checkbox" id="motel"  type="checkbox" name="motel" checked><label for="motel">Мотель</label>
+                <input class="checkbox" id="apartament" type="checkbox" name="apartament" ><label class="check-blocked" for="apartament">Апартаменты</label>
+            </section>
 
-			<div class="items">
+            <section class="filter-range">
+              <div class="filter-range-title">Стоимость в сутки (р):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label><!--
+                --><label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="btn-transparent" type="submit">Показать</button>
+            </section>
+          </form>
+        </section>
 
-     			<article class="item">
-      				<img src="#" alt="" />  
-      				<div class="item-description"></div> 
-      				<a href="#">  
-      				<span class="category">
-					Набор для путешествий
-                  </span>
-      				<span class="brand">
-					"Baxter of California"
-                  </span>
-                  </a>
-      				<div class="price-and-buy">
-						<span>2900 руб.</span>
-      					<a class="buy-btn" href="#">Купить</a>
-      				</div>
-    			</article>
+        <section class="catalog-header">
+          <section class="number-of clearfix">
+            <h3>Найдено:</h3> 
+            <span class="was-found">3</span>
+          </section>
+          <div class="selection">
+            <span>
+              Сортировка:
+            </span>
+            <a class="select-active" href="#">по цене</a>
+            <a href="#">по типу</a>
+            <a href="#">по рейтингу</a>
+          </div>
+          <div class="arrows">
+            <span class="icon-up-dir"></span>
+            <span class="icon-down-dir active-arrow"></span>
+          </div>
+        </section>
 
-     			<article class="item">
-      				<img src="#" alt="" />     
-      				<span class="category">
-					Увлажняющий кондиционер
-                    </span>
-      				<span class="brand">
-					"Baxter of California"
-                  </span>
-      				<div class="price-and-buy">
-						<span>750 руб.</span>
-      					<a class="buy-btn" href="#">Купить</a>
-      				</div>
-    			</article>
+        <section class="catalog-body">
+         
+          <article class="catalog-item clearfix">
+            <img src="img/catalog/item-1.jpg" alt="" width="130" height="90"/>
+            <div class="catalog-item-info clearfix">
+              <a href="#">
+                <h3>Amara resort &#38; spa</h3>
+              </a>  
+              <div class="clearfix"> 
+                <span class="type">Гостиница</span>
+                <span class="price-field">от <span class="price">3500</span> р.</span>
+              </div>
+              <div class="clearfix">
+                <a class="btn blue-btn info-btn" href="#">Подробнее</a>
+                <a class="btn brown-btn book-btn" href="#">Заказать</a>
+              </div>
+            </div>
+            <div class="rating">
+            <div class="stars">
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+            </div>
+            <div class="rating-score">
+              <span>Рейтинг:</span>
+              <span class="hotel-rating">8.5</span>
+              </div>
+            </div>
+          </article>
 
-     			<article class="item">
-      				<img src="#" alt="" />     
-      				<span class="category">
-					Гель для волос
-                    </span>
-      				<span class="brand">
-					"Suavecito"
-      				</span>
-      				<div class="price-and-buy">
-						<span>290 руб.</span>
-      					<a class="buy-btn" href="#">Купить</a>
-      				</div>
-    			</article>
+          <article class="catalog-item clearfix">
+            <img src="img/catalog/item-2.jpg" alt="" />
+            <div class="catalog-item-info clearfix">
+              <a href="#">
+                <h3>Desert Quail Inn</h3>
+              </a>
+              <div class="clearfix">  
+                <span class="type">Мотель</span>
+                <span class="price-field">от <span class="price">2000</span> р.</span>
+              </div>
+              <div class="clearfix">
+                <a class="btn blue-btn info-btn" href="#">Подробнее</a>
+                <a class="btn brown-btn book-btn" href="#">Заказать</a>
+              </div>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+              </div>
+              <div class="rating-score">
+                <span>Рейтинг:</span>
+                <span class="hotel-rating">8.9</span>
+              </div>
+            </div>
+          </article>
 
-     			<article class="item">
-      				<img src="#" alt="" />     
-      				<span class="category">
-					Глина для укладки волос
-      				</span>
-      				<span class="brand">
-					"American Crew"
-      				</span>
-      				<div class="price-and-buy">
-						<span>290 руб.</span>
-      					<a class="buy-btn" href="#">Купить</a>
-      				</div>
-    			</article>
 
-     			<article class="item">
-      				<img src="#" alt="" />     
-      				<span class="category">
-					Гель для волос
-      				</span>
-      				<span class="brand">
-					"American Crew"
-      				</span>
-      				<div class="price-and-buy">
-						<span>300 руб.</span>
-      					<a class="buy-btn" href="#">Купить</a>
-      				</div>
-    			</article>
+          <article class="catalog-item clearfix">
+            <img src="img/catalog/item-3.jpg" alt="" />
+            <div class="catalog-item-info clearfix">
+              <a href="">
+                <h3>Villas at Poco Diablo</h3>
+              </a>
+              <div class="clearfix">
+                <span class="type">Апартаменты</span>
+                <span class="price-field">от <span class="price">4000</span> р.</span>
+              </div>
+              <div class="clearfix">
+                <a class="btn blue-btn info-btn" href="#">Подробнее</a>
+                <a class="btn brown-btn book-btn" href="#">Заказать</a>
+              </div>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+              </div>
+              <div class="rating-score">
+                <span>Рейтинг:</span>
+                <span class="hotel-rating">9.2</span>
+              </div>
+            </div>
+          </article>
 
-     			<article class="item">
-      				<img src="#" alt="" />     
-      				<span class="category">
-					Гель для волос
-                    </span>
-      				<span class="brand">
-					"American Crew"
-      				</span>
-      				<div class="price-and-buy">
-						<span>300 руб.</span>
-      					<a class="buy-btn" href="#">Купить</a>
-      				</div>
-    			</article>
+        </section>
 
-     			<article class="item">
-      				<img src="#" alt="" />     
-      				<span class="category">
-					Набор для бритья
-      				</p>
-      				<p class="item-mark">
-					"Baxter of California"
-      				</p>
-      				<div class="price-and-buy">
-						<span>3900 руб.</span>
-      					<a class="buy-btn" href="#">Купить</a>
-      				</div>
-    			</article>
+      </main>
 
-			</div>
-			<div class="paginator">
-  			<div class="item-page"> <a href="#"></a>1</div>
-  			<div class="item-page"><a href="#">2</a></div>
-  			<div class="item-page"> <a href="#"></a>3</div>
-  			<div class="item-page"> <a href="#"></a>4</div>
-			</div>
-		</main>
+    <footer class="container clearfix">
+      <div class="footer-hashtag">#Visitsedona</div> 
+      <div class="footer-social">
+        <a class="social-btn blue-btn twitter" href="#"></a>
+        <a class="social-btn blue-btn facebook" href="#"></a>
+        <a class="social-btn blue-btn youtube" href="#"></a>
+      </div>
 
-		<footer class="main-footer">
-   			<div class="container">
-    			<section class="footer-contacts">
-       				Барбершоп «Бородинский»<br>
-       				Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-       				<a href="#">Как нас найти?</a><br>
-       				Телефон: +7 (812) 666-02-66
-     			</section>
-     			<section class="footer-social">
-       				<p>Давайте дружить!</p>
-       				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-       				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-       				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-     			</section>
-     			<section class="footer-copyright">
-       				<p>Разработано:</p>
-       				<a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-     			</section>
-   			</div>
- 		</footer>
-  </body>
-</html>
+      <div class="footer-website-by">
+        <span>Website by</span>
+        <a class="html-logo" href="https://htmlacademy.ru">
+        </a>
+      </div>
+       
+      </footer>
+
+
+    </body>
+  </html>
